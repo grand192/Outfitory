@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Outfitory</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string-array name="seasons_array">
+        <item>Summer</item>
+        <item>Fall</item>
+        <item>Winter</item>
+        <item>Spring</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="275dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/radialblue" >
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="Name" />
+
+        <LinearLayout
+            android:id="@+id/type_toggles"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/name_text" >
+
+            <ToggleButton
+                android:id="@+id/top_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Top"
+                android:textOn="Top"
+                android:onClick="setType" />
+
+            <ToggleButton
+                android:id="@+id/bottom_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ToggleButton"
+                android:textOff="Bottom"
+                android:textOn="Bottom" 
+                android:onClick="setType"/>
+
+            <ToggleButton
+                android:id="@+id/dress_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Dress"
+                android:textOn="Dress" 
+                android:onClick="setType"/>
+
+            <ToggleButton
+                android:id="@+id/shoes_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Shoes"
+                android:textOn="Shoes" 
+                android:onClick="setType"/>
+
+            <ToggleButton
+                android:id="@+id/other_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Other"
+                android:textOn="Other" 
+                android:onClick="setType"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/color_toggles"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/type_toggles"
+            android:layout_marginTop="14dp" >
+
+            <ToggleButton
+                android:id="@+id/black_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Black"
+                android:textOn="Black" 
+                android:onClick="setColor"/>
+
+            <ToggleButton
+                android:id="@+id/white_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="White"
+                android:textOn="White"
+                android:onClick="setColor" />
+
+            <ToggleButton
+                android:id="@+id/blue_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Blue"
+                android:textOn="Blue"
+                android:onClick="setColor" />
+
+            <ToggleButton
+                android:id="@+id/green_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Green"
+                android:textOn="Green"
+                android:onClick="setColor" />
+
+            <ToggleButton
+                android:id="@+id/red_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ToggleButton"
+                android:textOff="Red"
+                android:textOn="Red"
+                android:onClick="setColor" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/tag_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/color_toggles"
+            android:layout_marginTop="26dp"
+            android:ems="10"
+            android:hint="Tags" >
+
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/save_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" >
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Cancel" 
+                android:onClick="goToWardrobe"/>
+
+            <Button
+                android:id="@+id/save_continue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save &amp; Add Another" 
+                android:onClick="saveClothing"/>
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Save" 
+                android:onClick="saveClothing"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/picture"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="dispatchTakePictureIntent"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_camera" />
+
+</RelativeLayout>
